@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Admin Home Page</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles/admin_home_styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles/tmp.css">
+    <link rel="stylesheet" type="text/css" href="./styles/admin_home_tabs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  </head>
+  <body>    
+    <div w3-include-html="navigation_admin.html"></div> 
+    <script src="./js/importhtml.js"></script>   
+
+    <h1 align="center" style="margin:3%"> Welcome to Student Service Request System</h1>    
+    <div class="tabmodal"> 
+
+      <button class="tablink" onclick="openPage('Home', this, 'black')" style="width:50%">Home</button>
+      <button class="tablink" onclick="openPage('News', this, 'black')" id="defaultOpen" style="width:50%">News</button>
+      <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <p>Home is where the heart is..</p>
+      </div>
+  
+      <div id="News" class="tabcontent">
+        <h3>News</h3>
+        <p>Some news this fine day!</p> 
+      </div>
+  
+      <script>
+        function openPage(pageName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+    
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+      </script>
+    </div>
+  </body>
+</html>

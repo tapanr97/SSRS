@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   <title>SSRS</title>
+  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+ </head>
+ <body>
+   <canvas id="canvas"></canvas>
+   <div class="loginbox">
+       <img src="images/dalogo.jpg" class="dalogo">
+       <form>
+         <p>Student ID</p>
+         <input type="text" name="" placeholder="Enter Student ID">
+         <p>Password</p>
+         <input type="password" name="" placeholder="Enter Password">
+         <input type="submit" name="" value="Login"><br>
+         <a data-toggle="modal" href="#signModal" style="font-size: 15px">Signup</a><br  >
+         <a data-toggle="modal" href="#myModal" style="font-size: 15px">Lost your password?</a><br/>
+       </form>
+   </div>
+  
+   <!--Modal-->
+   <div class="modal fade" id="myModal" role="dialog">
+     <div class="modal-dialog">
+    
+       <!-- Modal content-->
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h4 class="modal-title">Reset Password</h4>
+         </div>
+         <div class="modal-body">
+           <form>
+             <p><strong>Enter your Registration ID</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" placeholder="Enter your Registration ID"></p>
+             <pre class="preformat">You will be sent reset password link to your webmail</pre>
+           </form>
+         </div>
+         <div class="modal-footer">
+           <button type="Generate Password" class="genPassBtn">Generate Password</button>
+         </div>
+       </div>
+      
+     </div>
+   </div>
+
+
+   <div class="modal fade" id="signModal" role="dialog">
+     <div class="modal-dialog">
+    
+       <!-- Modal content-->
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h4 class="modal-title">Signup Details</h4>
+         </div>
+         <div class="modal-body">
+           <form>
+             <p><strong>Enter your Registration ID<br></strong><input type="text" name="" placeholder="Enter your Registration ID" class="signUpEle"></p>
+             <p><strong>Password<br></strong><input type="password" name="" placeholder="Enter your Password" class="signUpEle"></p>
+             <pre class="preformat">You will be sent verification link to your webmail</pre>
+           </form>
+         </div>
+         <div class="modal-footer">
+           <button type="Generate Password" class="genPassBtn">Signup</button>
+         </div>
+       </div>
+      
+     </div>
+   </div>
+   <script src="./Js/background.js"></script>
+  </body>
+</html>
+
